@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>TextFormation.cf</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bgcolor-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Text Formation</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact US</a>
+              </li>
+              
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Well Done!</strong> Welcome to Text Formation.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    
+    <div class="container">
+      
+      <h1 class="text-decoration-underline"><b>Formatted text</b></h1>
+
+      <p><b>Formatted text</b> is text that is displayed in a special, specified style. In computer applications, formatting data may be associated with text data to create formatted text. How formatted text is created and displayed is dependent on the operating system and application software used on the computer.</p>
+      
+
+
+    </div>
+
+
+    <div class="container">
+        <form action="/analyze" method="post"> {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Enter your text here</label>
+                <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="5">(Choose only one function at a single time)</textarea>
+            </div>
+        
+            <div class="form-check form-switch">
+                <input class="form-check-input" name= "removepunc" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Removepunc</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name= "Charcount" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Charcount</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name= "Capitalize" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Capitalize</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name= "NewLineRemover" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">NewLineRemover</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name= "ExtraSpaceRemover" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">ExtraSpaceRemover</label>
+            </div>
+            
+
+
+
+
+
+            
+            <button type="submit" class="btn btn-dark mt-2">Analyzee Text</button>
+        </form>  
+
+
+
+
+    </div>
+    
+    <div class="container">
+      
+      <h2 class="mt-4"><b>Purpose</b></h2>
+
+      <p><b>The purpose</b> of formatted text is to enhance the presentation of information. For example, in the previous paragraph, the italicized words are each followed by examples. At a glance, the reader can ascertain that there are four special words in the paragraph. The goal is to help the reader to obtain, understand, and retain the information.
+
+      </p>
+
+
+      <h2 class="mt-4"><b>Functions</b></h2>
+        <div class="container">
+
+          <h4 class="text-decoration-underline mt-2">Removepunc:-</h4>
+          <P>A Removepunc Function is designed that goes through a list composed of the characters and punctuations of that string, removes the punctuation and then joins them.<br>
+          <b>Punctuation List :-</b> [''' !"#$%&'()*+, -./:;<=>?@[\]^_`{|}~''']
+          </P>
+
+          <h4 class="text-decoration-underline mt-2">Charcount:-</h4>
+          <p> A CharCount Function Counts the occurrences of a particular character in a string. Return. Number of occurrences of a particular character in a string.</p>
+
+
+          <h4 class="text-decoration-underline mt-2">Capitalize:-</h4>
+          <p>A Capitalize Function returns the uppercased string from the given string. It converts all lowercase characters to uppercase. If no lowercase characters exist, it returns the original string.</p>
+
+          <h4 class="text-decoration-underline mt-2">NewLineRemover:-</h4>
+          <p>A NewLineRemover Function allows you to remove unwanted new lines ('\n' and '\r') from text documents. </p>
+
+          <h4 class="text-decoration-underline mt-2">ExtraSpaceRemover:-</h4>
+          <p>A ExtraSpaceRemover Function allows you to remove unwanted space ('  ') from text documents. </p>
+
+          
+
+
+        </div>
+
+    </div>
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
