@@ -25,7 +25,7 @@ SECRET_KEY = '19)3#unxz@t1yr(d_nw6h32=yc73wgh)#a615o6uu8q2ivp^*&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['textformation.herokuapp.com']
 
 
 # Application definition
