@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '19)3#unxz@t1yr(d_nw6h32=yc73wgh)#a615o6uu8q2ivp^*&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['textformation.herokuapp.com','localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -119,10 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATICFILES_BASE = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
